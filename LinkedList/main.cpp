@@ -3,7 +3,9 @@
 using namespace std;
 
 int main()
-{
+ {
+    cout << "Hello world!" << endl;
+    return 0;
     cout<<"Menu Asuransi Kendaraan"<< endl;
     cout<<"1. Insert First"<<endl;
     cout<<"2. Insert After"<<endl;
@@ -24,4 +26,32 @@ int main()
         default : cout<<"pilihan tidak ada..."; break;
     }
     getch();
-}
+  infotype x;
+    list l;
+    address p;
+
+    CreateList(l);
+
+    input_data(x);
+    p=alokasi(x);
+    insertFirst(l,p);
+
+    input_data(x);
+    p=alokasi(x);
+    insertLast(l,p);
+
+    printInfo(l);
+
+    strcpy(x.id);
+    p=findElm(l,x);
+    cout << info(p).nama <<endl;
+
+    deleteFirst(l,p);
+    cout << info(p).id <<endl;
+
+    printInfo(l);
+
+    strcpy(x.id);
+    p=findElm(l,x);
+    cout << p <<endl;
+ }
